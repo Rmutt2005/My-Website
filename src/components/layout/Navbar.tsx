@@ -13,16 +13,16 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className=" flex mr-5 fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-center h-16 gap-60 ">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="text-xl font-bold text-gradient">
             Portfolio
           </NavLink>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Navigation */}
+          <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -35,8 +35,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden md:block">
+          {/* Right side */}
+          <div className="flex items-center gap-4">
             <Button className="bg-primary hover:bg-primary/90" asChild>
               <a
                 href="https://mail.google.com/mail/?view=cm&to=rmuttmail2005@email.com"
@@ -46,12 +46,10 @@ const Navbar = () => {
                 Contact Me
               </a>
             </Button>
+
+            <ThemeToggle />
           </div>
         </div>
-      </div>
-      {/* Theme Toggle */}
-      <div className="hidden md:block pt-3">
-        <ThemeToggle />
       </div>
     </nav>
   );
