@@ -11,7 +11,7 @@ const Projects = () => {
       title: "IOT Project Auto Watering System",
       description:
         "This project is an IoT-based automatic plant watering system with Wi-Fi control. The system uses a soil moisture sensor to monitor soil conditions and automatically activates a water pump when the soil is dry. Users can also control and monitor the system remotely via Wi-Fi, making plant care more convenient and efficient.",
-      image: "https://i.ibb.co/CpP4mZG1/image.png",
+      image: "/Iot.png",
       tags: ["Arduino C++", "HTML", "CSS", "Javascript"],
       MoreUrl: "/public/IotProject.mp4",
       githubUrl:
@@ -21,7 +21,7 @@ const Projects = () => {
       title: "Valentine Single Page Web",
       description:
         "This project is a Valentine-themed web application created to practice and improve React development skills. The website focuses on component-based design, state management, and interactive user interfaces. It demonstrates the use of React to build a responsive and engaging web experience while experimenting with UI logic and user interactions in a fun and creative theme.",
-      image: "/public/valentine.JPG",
+      image: "/valentine.JPG",
       tags: ["React", "TypeScript"],
       MoreUrl: "https://my-valentine-web.vercel.app/",
       githubUrl: "https://github.com/Rmutt2005/my-valentine-web",
