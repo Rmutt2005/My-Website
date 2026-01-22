@@ -13,7 +13,7 @@ const Projects = () => {
         "This project is an IoT-based automatic plant watering system with Wi-Fi control. The system uses a soil moisture sensor to monitor soil conditions and automatically activates a water pump when the soil is dry. Users can also control and monitor the system remotely via Wi-Fi, making plant care more convenient and efficient.",
       image: "/Iot.png",
       tags: ["Arduino C++", "HTML", "CSS", "Javascript"],
-      MoreUrl: "/public/IotProject.mp4",
+      MoreUrl: "/IotProject.mp4",
       githubUrl:
         "https://github.com/Rmutt2005/arduino-project-auto-waterring-system",
     },
