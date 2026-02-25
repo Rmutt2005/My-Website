@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -80,10 +85,21 @@ export default {
             height: "0",
           },
         },
+        "bg-shift": {
+          "0%": { backgroundPosition: "50% 50%, center, center, center" },
+          "50%": { backgroundPosition: "55% 45%, center, center, center" },
+          "100%": { backgroundPosition: "50% 50%, center, center, center" },
+        },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bg-shift": "bg-shift 14s ease-in-out infinite",
+        "fade-up": "fade-up 700ms ease-out both",
       },
     },
   },

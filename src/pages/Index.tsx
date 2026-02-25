@@ -28,13 +28,20 @@ const Index = () => {
       <Layout>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-hero" />
+          <div className="absolute inset-0 bg-gradient-hero motion-safe:animate-bg-shift" />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(600px circle at 50% 30%, hsl(var(--ring) / 0.18), transparent 60%)",
+            }}
+          />
           <div className="container mx-auto px-6 py-24 md:py-32 relative">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center motion-safe:animate-fade-up">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                 👋 Welcome to my portfolio
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
                 Hi, I'm <span className="text-gradient">Tawan</span>
                 <br />
                 Web Developer
