@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# 🌐 My Website
 
-## Project info
+This repository contains the source code and configuration for my personal website — a modern, responsive web application built with the latest web technologies.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 📌 About the Project
 
-## How can I edit this code?
+This project is a personal website that showcases information about myself, my skills, and my work. It is designed to be fast, responsive, and visually appealing across devices. The website was created using modern frontend tooling and frameworks to ensure great performance and developer experience.
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+To work on this project locally, make sure you have **Node.js** and **npm** installed.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 💻 Setup
 
-Changes made via Lovable will be committed automatically to this repo.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Rmutt2005/My-Website.git
 
-**Use your preferred IDE**
+Navigate into the project folder:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+cd My-Website
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Install dependencies:
 
-Follow these steps:
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Run the development server:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+You’ll now be able to preview the site with automatic reloading on code changes.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🛠️ Tech Stack
 
-**Use GitHub Codespaces**
+The website is built using the following technologies:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Vite – Fast build tooling and development server
 
-## What technologies are used for this project?
+React – UI framework for building components
 
-This project is built with:
+TypeScript – Strongly-typed JavaScript
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Tailwind CSS – Utility-first CSS framework
 
-## How can I deploy this project?
+shadcn/ui – Component library for styled UI elements
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+📦 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+You can deploy this website using static hosting services. One easy option is:
 
-Yes, you can!
+Vercel – Automatic deployment with zero configuration
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+GitHub Pages – Host static exported files directly from the repository
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+To deploy with Vercel:
+
+Connect your repository in Vercel
+
+Select default settings
+
+Publish — updates will automatically happen on every commit
+
+🌍 Custom Domain
+
+You can set up a custom domain by adjusting your deployment settings (e.g., in Vercel or GitHub Pages settings).
+
+🧠 Features
+
+✨ Modern, responsive design
+
+⚡ Fast development with Vite
+
+💎 Component-based structure (React + TypeScript)
+
+🎨 Styling with Tailwind CSS
+
+🙌 Contributing
+
+You’re welcome to help improve this site. Feel free to open issues or make pull requests!
