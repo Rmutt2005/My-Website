@@ -11,9 +11,10 @@ const About = () => {
     "CSS",
     "Javascript",
     "ReactJS",
+    "NextJS",
     "TypeScript",
     "Tailwind CSS",
-    "Git",
+    "Github",
     "Arduino C++",
   ];
   const education = [
@@ -32,9 +33,9 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20 bg-gradient-hero motion-safe:animate-bg-shift">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-12 motion-safe:animate-fade-up">
             <div className="flex-shrink-0">
               <Avatar className="w-48 h-48 border-10 border-primary/20 rounded-full overflow-hidden">
                 <AvatarImage src="avartar.jpg" />
@@ -43,7 +44,7 @@ const About = () => {
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                About <span className="text-orange-500">Me</span>
+                About <span className="text-gradient-animate">Me</span>
               </h1>
               <div className="flex items-center gap-2 text-muted-foreground mb-4">
                 <MapPin className="h-4 w-4" />
@@ -72,7 +73,7 @@ const About = () => {
               <Badge
                 key={skill}
                 variant="secondary"
-                className="px-4 py-2 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                className="px-4 py-2 text-sm font-medium cursor-default transition-all duration-300 ease-in-out hover:bg-primary/20 hover:text-foreground hover:border-primary/30 hover:shadow-lg hover:shadow-primary/15"
               >
                 {skill}
               </Badge>

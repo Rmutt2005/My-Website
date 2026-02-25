@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <span className="text-xl font-bold text-gradient">Portfolio</span>
             <p className="text-muted-foreground text-sm mt-2">
-              © {currentYear} All rights reserved.
+              © {currentYear} Made by Tawan
             </p>
           </div>
 

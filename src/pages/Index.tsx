@@ -36,13 +36,15 @@ const Index = () => {
                 "radial-gradient(600px circle at 50% 30%, hsl(var(--ring) / 0.18), transparent 60%)",
             }}
           />
+          <div className="absolute inset-0 pointer-events-none bg-orbs motion-safe:animate-orb-float" />
+          <div className="code-stream" />
           <div className="container mx-auto px-6 py-24 md:py-32 relative">
             <div className="max-w-3xl mx-auto text-center motion-safe:animate-fade-up">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                 👋 Welcome to my portfolio
               </div>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
-                Hi, I'm <span className="text-gradient">Tawan</span>
+                Hi, I'm <span className="text-gradient-animate">Tawan</span>
                 <br />
                 Web Developer
               </h1>

@@ -40,16 +40,16 @@ const Projects = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20 bg-gradient-hero motion-safe:animate-bg-shift">
         <div className="container mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 motion-safe:animate-fade-up">
             <Folder className="h-4 w-4" />
             My Portfolio
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight motion-safe:animate-fade-up">
             My <span className="text-gradient">Projects</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto motion-safe:animate-fade-up">
             Here are some of my recent projects. Each one was carefully crafted
             with attention to detail, performance, and user experience.
           </p>
@@ -63,7 +63,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
+                className="group overflow-hidden border-border/60 hover:border-primary/30 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-primary/10"
               >
                 <div className="relative overflow-hidden">
                   <img

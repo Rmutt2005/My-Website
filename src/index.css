@@ -116,11 +116,11 @@
   }
 
   .dark {
-    --background: 224 60% 5%;
+    --background: 225 65% 4%;
     --foreground: 210 40% 96%;
 
-    --bg-0: 224 60% 6%;
-    --bg-1: 230 55% 4%;
+    --bg-0: 225 65% 5%;
+    --bg-1: 230 70% 3%;
     --pattern: 205 65% 68%;
     --glow: 190 95% 52%;
     --glow-2: 200 90% 56%;
@@ -168,21 +168,31 @@
     --gradient-hero:
       radial-gradient(
         1200px circle at 18% 8%,
-        hsla(var(--glow) / 0.18),
-        transparent 58%
+        hsla(var(--glow) / 0.22),
+        transparent 60%
       ),
       radial-gradient(
         900px circle at 86% 24%,
-        hsla(var(--glow-2) / 0.14),
-        transparent 62%
+        hsla(var(--glow-2) / 0.16),
+        transparent 64%
       ),
       radial-gradient(
-        1200px circle at 50% 120%,
-        hsla(230 80% 20% / 0.45),
-        transparent 62%
+        1100px circle at 50% 115%,
+        hsla(230 80% 16% / 0.55),
+        transparent 66%
       ),
       linear-gradient(180deg, hsla(var(--bg-0) / 1), hsla(var(--bg-1) / 1));
-    --pattern-opacity: 0.085;
+    --pattern-opacity: 0.07;
+    --orb-1: radial-gradient(
+      420px circle at 20% 30%,
+      hsla(var(--glow) / 0.16),
+      transparent 62%
+    );
+    --orb-2: radial-gradient(
+      520px circle at 78% 22%,
+      hsla(var(--glow-2) / 0.12),
+      transparent 64%
+    );
   }
 }
 
@@ -193,6 +203,8 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    position: relative;
+    isolation: isolate;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
@@ -213,7 +225,74 @@
     background-image: var(--gradient-primary);
   }
 
+  .text-gradient-animate {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+    background-size: 220% 220%;
+    animation: gradient-pan 14s ease-in-out infinite;
+  }
+
   .bg-gradient-hero {
     background-image: var(--gradient-hero);
+  }
+
+  .bg-orbs {
+    background-image: var(--orb-1), var(--orb-2);
+    filter: blur(6px);
+    opacity: 0.9;
+  }
+
+  .code-stream {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .code-stream::before {
+    content: 'const rpc="https://";\nasync function connect(){return await window.ethereum?.request({method:"eth_requestAccounts"})}\n\nexport const abi=[/* ... */]\n\nfunction hash(x){return crypto.subtle}\n\nif(chainId!==1){/* switch */}\n\nlet nonce=0; setInterval(()=>nonce++, 1000);\n\ntry{await fetch(\'/api\')}catch(e){}\n\n// zk proofs\n// merkle roots\n';
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translateX(-50%);
+    width: min(900px, 92vw);
+    white-space: pre;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: hsl(var(--foreground) / 0.1);
+    opacity: 0.07;
+    filter: blur(0.7px);
+    animation: code-scroll 26s linear infinite;
+  }
+}
+
+@keyframes gradient-pan {
+  0% {
+    background-position: 10% 50%;
+  }
+  50% {
+    background-position: 90% 50%;
+  }
+  100% {
+    background-position: 10% 50%;
+  }
+}
+
+@keyframes code-scroll {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, -280px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
   }
 }
